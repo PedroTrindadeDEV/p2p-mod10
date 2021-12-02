@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const express = require('express');
-const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
+const express = require("express");
+const redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
 
 /**
  * Starts the Express server.
@@ -26,12 +26,12 @@ function startServer() {
   });
 
   // Handle requests for static files
-  app.use(express.static('public'));
+  app.use(express.static("public"));
 
   // Start the server
-  return app.listen('8000', () => {
+  return app.listen("8000", () => {
     // eslint-disable-next-line no-console
-    console.log('Local DevServer Started on port 8000...');
+    console.log("Local DevServer Started on port 8000...");
   });
 }
 
