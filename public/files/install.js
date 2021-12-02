@@ -19,10 +19,10 @@ function installPWA(evt) {
   evt.srcElement.setAttribute("hidden", true);
   // CODELAB: Log user response to prompt.
   deferredInstallPrompt.userChoice.then((choice) => {
-    if (choice.outcome === "accepted") {
+    if ((choice.outcome === "accepted", choice)) {
       console.log("aceptado");
     } else {
-      console.log("No aceptado");
+      console.log("No aceptado", choice);
     }
     deferredInstallPrompt = null;
   });
@@ -33,5 +33,5 @@ window.addEventListener("appinstalled", logAppInstalled);
 
 function logAppInstalled(evt) {
   // CODELAB: Add code to log the event
-  console.log("Pelis instalada app");
+  console.log("Pelis instalada app", evt);
 }
